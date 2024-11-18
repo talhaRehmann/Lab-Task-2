@@ -1,0 +1,70 @@
+University Transport System
+A simple transport management system designed for a university campus using Observer Pattern and Pipe and Filter Architecture. The system manages bus schedules, student registrations, payments, logging, and data storage using a modular approach.
+
+Project Overview
+The University Transport System aims to manage bus schedules, student registrations, payments, and transport-related logs in a university. The system is designed using Observer Pattern and Pipe and Filter Architecture.
+
+Observer Pattern: Used to notify different system components (like bus schedules, student registrations, logger, etc.) when there's an update.
+Pipe and Filter Architecture: Used for processing data through different filters (e.g., bus schedule updates, student registrations, payments).
+Components
+Subject: Central system that manages the state and notifies observers.
+Observers:
+BusSchedule: Updates bus timings.
+StudentCheck: Handles student registration for buses.
+Logger: Logs events.
+TransportStorage: Stores transport data.
+Features
+Real-time updates of bus schedules.
+Student registration for buses.
+Payment processing for bus rides.
+Logging of events and actions.
+Transport data storage.
+Installation Instructions
+To run the University Transport System, follow these steps:
+
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/university-transport-system.git
+Navigate to the project folder:
+
+bash
+Copy code
+cd university-transport-system
+Compile the Java files: Ensure you have Java installed. If not, download and install Java from here.
+
+Compile all Java files:
+
+bash
+Copy code
+javac *.java
+Run the project: After compiling, run the Main class to start the application:
+
+bash
+Copy code
+java UniversityTransportSystem
+Usage
+The system will simulate updates on bus schedules, student registrations, and payments.
+The observers (BusSchedule, StudentCheck, Logger, TransportStorage) will receive updates based on the changes in the Subject (University Transport System).
+After each update, logs and transport data are stored and printed.
+Example output when you run the system:
+
+sql
+Copy code
+Bus Schedule Update: Bus Bus1 on route Main Campus - South Campus - Bus Schedule Updated: Bus 1 arrives at 8:00 AM, Bus 2 arrives at 9:00 AM
+Student Alice (S001) received the update: Student Alice registers for Bus 1
+Logger: All systems processed successfully
+Transport Storage updated with: All systems processed successfully
+File Structure
+arduino
+Copy code
+UniversityTransportSystem
+│
+├── Subject.java          // Subject class: Manages the state and notifies observers.
+├── Observer.java         // Observer interface: Defines the update method for all observers.
+├── BusSchedule.java      // Concrete observer: Handles bus schedules.
+├── StudentCheck.java     // Concrete observer: Handles student registrations.
+├── Logger.java           // Concrete observer: Logs events.
+├── TransportStorage.java // Concrete observer: Stores transport data.
+└── UniversityTransportSystem.java // Main class: The entry point to the system.
